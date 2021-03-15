@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CheckoutSteps from 'C:\Users\matt2\OneDrive\Desktop\repos\project-space-lion-web\frontend\src\Payment';
+import CheckoutSteps from 'C:/Users/matt2/OneDrive/Desktop/repos/project-space-lion-web/frontend/src/Payment/CheckoutSteps';
 
 function PaymentScreen()
 {
