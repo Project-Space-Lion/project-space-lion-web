@@ -13,8 +13,7 @@ function App() {
   const closeMenu = () => {
     document.querySelector(".sidebar")?.classList.remove("open");
   }
-  return
-  {
+  return (
       <div className="grid-container">
         <head>
           <link rel="stylesheet" href="style.css"></link>
@@ -49,7 +48,7 @@ function App() {
                         <ul className="products">
                             <li>
                                 <div className="produtcs">
-                                    <img className="product-image" src="image/d1.jpg" alt="product" />
+                                    <img className="product-image" src="images/d1.jpg" alt="product" />
                                     <div className="product-name">
                                         <a href="product.html">Slim Shirt</a>
                                     </div>
@@ -60,7 +59,7 @@ function App() {
                             </li>
                             <li>
                                 <div className="produtcs">
-                                    <img className="product-image" src="image/d1.jpg" alt="product" />
+                                    <img className="product-image" src="images/d1.jpg" alt="product" />
                                     <div className="product-name">
                                         <a href="product.html">Slim Shirt</a>
                                     </div>
@@ -71,7 +70,7 @@ function App() {
                             </li>
                             <li>
                                 <div className="produtcs">
-                                    <img className="product-image" src="image/d1.jpg" alt="product" />
+                                    <img className="product-image" src="images/d1.jpg" alt="product" />
                                     <div className="product-name">
                                         <a href="product.html">Slim Shirt</a>
                                     </div>
@@ -82,7 +81,7 @@ function App() {
                             </li>
                             <li>
                                 <div className="produtcs">
-                                    <img className="product-image" src="image/d1.jpg" alt="product" />
+                                    <img className="product-image" src="images/d1.jpg" alt="product" />
                                     <div className="product-name">
                                         <a href="product.html">Slim Shirt</a>
                                     </div>
@@ -99,6 +98,6 @@ function App() {
                 </footer>
           </body>
       </div>
-  }
+  );
 }
 export default App;
