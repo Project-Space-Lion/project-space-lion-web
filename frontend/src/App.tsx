@@ -6,6 +6,7 @@ import Product from './Products/Products';
 import Home from './Home/Home';
 import data from './Products/data';
 import Products from './Products/Products';
+import Orders from './Orders/Orders';
 
 function App() {
    const openMenu = () => {
@@ -33,9 +34,9 @@ function App() {
                 </div>
                 <div className="header-links">
                    <Link to="/">Home </Link>
-                   <Link to="/catelog">Catelog</Link>
-                   <Link to="/catelog">Orders</Link>
-                   <Link to="/catelog">Payment</Link>
+                   <Link to="/catalog">Catalog</Link>
+                   <Link to="/orders">Orders</Link>
+                   <Link to="/catalog">Payment</Link>
                 </div>
             </header>
     
@@ -60,7 +61,13 @@ function App() {
                      </Route>
                      <Route path="/catalog">
                          <Products />
-                     </Route>   
+                     </Route> 
+                     <Route path="/orders">
+                        <Orders />
+                    </Route> 
+                    <Route path="/order/:id">
+                        <OrderDetail />
+                        </Route> 
                 </Switch>            
              </main>
              <footer className="footer">

@@ -59,3 +59,168 @@ import data from './data';
         <div className = "product">
             img className = "product-image" src={product.imageUrl} alt="product" />)
 }
+
+<div className="content">
+    <ul className="products">
+
+    </ul>
+</div>
+
+
+export default {
+    products: [{
+        name: 'Shirt',
+        imageUrl: '/images/d1.jpg',
+        price: 60,
+        brand: 'Nike',
+        rating: 4.5,
+        numberOfReviews: 10,
+    },
+    {          
+        name: 'Shirt',
+        imageUrl: '/images/d1.jpg',
+        price: 60,
+        brand: 'Nike',
+        rating: 4.5,
+        numberOfReviews: 10,
+        
+    }, 
+    {   
+        name: 'Shirt',
+        imageUrl: '/images/d1.jpg',
+        price: 60,
+        brand: 'Nike',
+        rating: 4.5,
+        numberOfReviews: 10,
+    },
+    {   
+        name: 'Shirt',
+        imageUrl: '/images/d1.jpg',
+        price: 60,
+        brand: 'Nike',
+        rating: 4.5,
+        numberOfReviews: 10,
+    },
+    {   
+        name: 'Shirt',
+        imageUrl: '/images/d1.jpg',
+        price: 60,
+        brand: 'Nike',
+        rating: 4.5,
+        numberOfReviews: 10,
+    }]
+}
+
+
+import React from 'react';
+import data from './data';
+
+{
+    data.product.map(product
+    <li>
+        <div className = "product">
+            img className = "product-image" src={product.imageUrl} alt="product" />)
+}
+
+
+Order Feature
+
+export default {
+    orders: [{
+        _id: 1,
+        createdAt: '02/20/2021',
+        totalPrice: 42.90,
+        user: {
+            name: 'Taylor'
+        },
+        isPaid: true,
+        paidAt: '02/14/2021',
+        isDelivered: false,
+        deliveredDate: null,
+    },
+    {
+        _id: 2,
+        createdAt: '02/20/2021',
+        totalPrice: 42.90,
+        user: {
+            name: 'Pedro'
+        },
+        isPaid: true,
+        paidAt: '02/14/2021',
+        isDelivered: false,
+        deliveredDate: null,
+    },
+    {
+        _id: 3,
+        createdAt: '02/20/2021',
+        totalPrice: 42.90,
+        user: {
+            name: 'Sanjay'
+        },
+        isPaid: true,
+        paidAt: '02/14/2021',
+        isDelivered: false,
+        deliveredDate: null,
+    }]
+}
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import data from './data';
+
+function Orders() {
+    return (
+        <div className="content content-margined">
+        <div className="order-header">
+        <h3>Orders</h3>
+        </div>
+        <div className="order-list">
+            <table className="table">
+
+            </table>
+        </div>
+        </div>);
+
+};
+
+export default Orders;
+
+
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>DATE</th>
+        <th>TOTAL</th>
+        <th>USER</th>
+        <th>PAID</th>
+        <th>PAID AT</th>
+        <th>DELIVERED</th>
+        <th>DELIVERED AT</th>
+        <th>ACTIONS</th>
+    </tr>
+</thead>
+
+
+<tbody>
+    {data.orders.map(order => (<tr key={order._id}>
+        <td>{order._id}</td>
+        <td>{order.createdAt}</td>
+        <td>{order.totalPrice}</td>
+        <td>{order.user.name}</td>
+        <td>{order.isPaid.toString()}</td>
+        <td>{order.paidAt}</td>
+        <td>{order.isDelivered.toString()}</td>
+        <td>{order.deliveredDate}</td>
+        <td>
+            <Link to={"/order/" + order._id} className="button secondary" >Details</Link>
+        </td>
+    </tr>))}
+</tbody>
+
+
+<Link to="/orders">Orders</Link>
+
+<Route path="/orders">
+    <Orders />
+</Route>
