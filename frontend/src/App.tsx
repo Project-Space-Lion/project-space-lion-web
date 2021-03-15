@@ -7,6 +7,7 @@ import Home from './Home/Home';
 import data from './Products/data';
 import Products from './Products/Products';
 import Orders from './Orders/Orders';
+import OrderDetail from './Orders/OrderDetails';
 
 function App() {
    const openMenu = () => {
