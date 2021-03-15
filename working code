@@ -1,0 +1,61 @@
+<div className="content">
+    <ul className="products">
+
+    </ul>
+</div>
+
+
+export default {
+    products: [{
+        name: 'Shirt',
+        imageUrl: '/images/d1.jpg',
+        price: 60,
+        brand: 'Nike',
+        rating: 4.5,
+        numberOfReviews: 10,
+    },
+    {          
+        name: 'Shirt',
+        imageUrl: '/images/d1.jpg',
+        price: 60,
+        brand: 'Nike',
+        rating: 4.5,
+        numberOfReviews: 10,
+        
+    }, 
+    {   
+        name: 'Shirt',
+        imageUrl: '/images/d1.jpg',
+        price: 60,
+        brand: 'Nike',
+        rating: 4.5,
+        numberOfReviews: 10,
+    },
+    {   
+        name: 'Shirt',
+        imageUrl: '/images/d1.jpg',
+        price: 60,
+        brand: 'Nike',
+        rating: 4.5,
+        numberOfReviews: 10,
+    },
+    {   
+        name: 'Shirt',
+        imageUrl: '/images/d1.jpg',
+        price: 60,
+        brand: 'Nike',
+        rating: 4.5,
+        numberOfReviews: 10,
+    }]
+}
+
+
+import React from 'react';
+import data from './data';
+
+{
+    data.product.map(product
+    <li>
+        <div className = "product">
+            img className = "product-image" src={product.imageUrl} alt="product" />)
+}
