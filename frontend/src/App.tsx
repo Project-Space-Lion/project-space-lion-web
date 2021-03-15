@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom';
+import Product from './Products/Products';
+import Home from './Home/Home';
+import data from './Products/data';
 
 function App() {
    const openMenu = () => {
@@ -9,92 +13,25 @@ function App() {
   const closeMenu = () => {
     document.querySelector(".sidebar")?.classList.remove("open");
   }
-  return (
-    <div className = "grid-containter">
-    <head>
-      <link rel="stylesheet" href="style.css"/>
-        <title>Space Lion</title>
-    </head>
-    <body>
-        <header className = "header">
-            <div className = "brand">
-                <button onClick = {openMenu}>&#9776;</button>
-                <a href = "index.html">Space Lion</a>
-            </div>
-            <div className = "header-links">
-                <a href = "cart.html">Cart</a>
-                <a href = "signin.html">Sign In</a>
-            </div>
-        </header>
-        <aside className = "sidebar">
-            <h3>Shopping Categories</h3>
-            <button className = "sidebar-close-button" onClick={closeMenu}>x</button>
-            <ul>
-                <li>
-                   <a href="index.html">Pants</a>
-                </li>
+ <div className="content">
+    <ul className="products">
+    {
+        data.products.map(product =>
+            <li>
+                <div className = "product">
+                    <img className="product-image" src={product.imageUrl} alt="product" />
+                    <div className="product-name">
+                        <a href="product.html">{product.name}</a>
+                    </div>
+                    <div className="product-brand">{product.brand}</div>
+                    <div className="product-price">{product.price}</div>
+                    <div className="product-rating">{product.rating} Stars ({product.numberOfReviews} Reviews)</div>
+                </div>
+            </li>)
+    }
+    </ul>
+ </div>
 
-                <li>
-                    <a href = "index.html">Shirts</a>
-                </li>
-            </ul>
-        </aside>
-        <main className = "main">
-            <div className = "content">
-                <ul className = "products">
-                    <li>
-                        <div className = "product">
-                            <img className = "product-image" src="images/d1.jpg" alt = "product" />
-                            <div className = "product-name">
-                                <a href = "product.html">Slim Shirts</a>
-                            </div>
-                            <div className = "product-brand">Nike</div>
-                            <div className = "product-price">$60</div>
-                            <div className = "product-rating">4.5 Stars (10 Reviews)</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div className = "product">
-                            <img className = "product-image" src="images/d1.jpg" alt = "product" />
-                            <div className = "product-name">
-                                <a href = "product.html">Slim Shirts</a>
-                            </div>
-                            <div className = "product-brand">Nike</div>
-                            <div className = "product-price">$60</div>
-                            <div className = "product-rating">4.5 Stars (10 Reviews)</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div className = "product">
-                            <img className = "product-image" src="images/d1.jpg" alt = "product" />
-                            <div className = "product-name">
-                                <a href = "product.html">Slim Shirts</a>
-                            </div>
-                            <div className = "product-brand">Nike</div>
-                            <div className = "product-price">$60</div>
-                            <div className = "product-rating">4.5 Stars (10 Reviews)</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div className = "product">
-                            <img className = "product-image" src="images/d1.jpg" alt = "product" />
-                            <div className = "product-name">
-                                <a href = "product.html">Slim Shirts</a>
-                            </div>
-                            <div className = "product-brand">Nike</div>
-                            <div className = "product-price">$60</div>
-                            <div className = "product-rating">4.5 Stars (10 Reviews)</div>
-                        </div>
-                    </li>
-                </ul>
-          </div>
-        </main>
-        <footer className = "footer">
-            &copy; 2021 Space Lion
-        </footer>
-    </body>
-    </div>
-  );
-}
+        }
 
 export default App;
