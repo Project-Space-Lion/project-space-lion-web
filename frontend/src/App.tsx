@@ -34,6 +34,8 @@ function App() {
                 <div className="header-links">
                    <Link to="/">Home </Link>
                    <Link to="/catelog">Catelog</Link>
+                   <Link to="/catelog">Orders</Link>
+                   <Link to="/catelog">Payment</Link>
                 </div>
             </header>
     
@@ -58,7 +60,7 @@ function App() {
                      </Route>
                      <Route path="/catalog">
                          <Products />
-                     </Route>     
+                     </Route>   
                 </Switch>            
              </main>
              <footer className="footer">
