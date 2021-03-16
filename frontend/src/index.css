@@ -211,3 +211,9 @@ th {
 tbody > tr:nth-child(odd) {
   background-color: #f0f0f0;
 }
+.fulfillment-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+

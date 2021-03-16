@@ -2,14 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom';
-import Product from './Products/Products';
 import Home from './Home/Home';
-import data from './Products/data';
 import Products from './Products/Products';
 import Orders from './Orders/Orders';
 import OrderDetail from './Orders/OrderDetails';
-import CheckoutSteps from './Payment/CheckoutSteps';
 import Payment from './Payment/Payment';
+import Fulfillment from './Fulfillment/Fulfillment'
 
 
 function App() {
@@ -41,6 +39,7 @@ function App() {
                    <Link to="/catalog">Catalog</Link>
                    <Link to="/orders">Orders</Link>
                    <Link to="/Payment">Payment</Link>
+                   <Link to="/Fulfillment">Fulfillment</Link>
                    
                 </div>
             </header>
@@ -76,6 +75,9 @@ function App() {
                         <Route path="/Payment">
                         <Payment />
                         </Route> 
+                        <Route path="/Fulfillment">
+                        <Fulfillment />
+                        </Route>                         
                 </Switch>            
              </main>
              <footer className="footer">
