@@ -2,13 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom';
-import Product from './Products/Products';
 import Home from './Home/Home';
-import data from './Products/data';
 import Products from './Products/Products';
 import Orders from './Orders/Orders';
 import OrderDetail from './Orders/OrderDetails';
-import CheckoutSteps from './Payment/CheckoutSteps';
 import Payment from './Payment/Payment';
 import Fulfillment from './Fulfillment/Fulfillment'
 

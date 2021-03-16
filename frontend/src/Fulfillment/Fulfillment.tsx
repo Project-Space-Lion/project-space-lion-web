@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import data from './data';
 
@@ -23,23 +22,29 @@ function Fulfillment() {
                         <th>DELIVERED AT</th>
                         <th>ACTIONS</th>
                     </tr>
-                </thead>
+                </thead>          
                 <tbody>
                     {data.fulfillment.map(fulfillment => (<tr key={fulfillment._id}>
                         <td>{fulfillment._id}</td>
+
                         <td>{fulfillment.createdAt}</td>
+
                         <td>{fulfillment.totalPrice}</td>
                         <td>{fulfillment.user.name}</td>
                         <td>{fulfillment.isPaid.toString()}</td>
                         <td>{fulfillment.paidAt}</td>
                         <td>{fulfillment.address}</td>
-                        <td>{fulfillment.isDelivered.toString()}</td>
+                        
+                        <td> {fulfillment.isDelivered}</td>
+                    
+
                         <td>{fulfillment.deliveredDate}</td>
                         <td>
                             <Link to={"/fulfillment/" + fulfillment._id} className="button secondary" >Details</Link>
                         </td>
                  </tr>))}
                 </tbody>
+                
 
             </table>
         </div>
